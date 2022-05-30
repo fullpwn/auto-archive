@@ -14,7 +14,9 @@ jobs:
         run: pip install waybackpy -U
       - name: List Directory
         run: ls
-      - name: Archive Main
+      - name: Create File
+        run: echo -e "from waybackpy import WaybackMachineSaveAPI\nurl = "https://fullpwn.is-a.dev"\nuser_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36"\nsave_api = WaybackMachineSaveAPI(url, user_agent)\nsave_api.save()" >> run.py
+      - name: Run run.py
         run: python3 run.py
           
         
