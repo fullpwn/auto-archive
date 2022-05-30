@@ -1,6 +1,5 @@
 name: Archival
 on:
-  push:
   schedule:
     - cron: 0 * * * *
 
@@ -14,8 +13,6 @@ jobs:
         run: sudo apt install python3
       - name: Install Waybackpy
         run: pip install waybackpy -U
-      - name: List Directory
-        run: ls
       - name: Run run.py
         run: python3 run.py
           
