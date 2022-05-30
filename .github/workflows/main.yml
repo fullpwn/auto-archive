@@ -1,19 +1,15 @@
 name: Archive
 on:
-  workflow_dispatch: null
   schedule:
     - cron: 0 * * * *
+
 jobs:
-  Version:
+  test_schedule:
     runs-on: ubuntu-latest
     steps:
-      - uses: fregante/daily-version-action@v1
-        name: Archive Site
-        id: daily-version
-        with:
-          script: |
-            sudo apt install py3
-            pip install waybackpy -U
-            
+      - name: Install Python
+        run: sudo apt install py3
+      - name: Install Waybackpy
+        run: pip install waybackpy -U
           
         
