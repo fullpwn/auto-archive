@@ -1,0 +1,19 @@
+name: Release
+on:
+  workflow_dispatch: null
+  schedule:
+    - cron: 0 * * * *
+jobs:
+  Version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: fregante/daily-version-action@v1
+        name: Archive Site
+        id: daily-version
+        with:
+          script: |
+            sudo apt install py3
+            pip install waybackpy -U
+            
+          
+        
