@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install Python
-        run: sudo apt install py3
+        run: sudo apt install python3
       - name: Install Waybackpy
         run: pip install waybackpy -U
           
