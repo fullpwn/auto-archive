@@ -8,12 +8,14 @@ jobs:
   Archive:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout repo
+        uses: actions/checkout@v2.3.4
       - name: Install Python
         run: sudo apt install python3
       - name: Install Waybackpy
         run: pip install waybackpy -U
       - name: List Directory
-        run: ls $github_workspace
+        run: ls
       - name: Run run.py
         run: python3 run.py
           
