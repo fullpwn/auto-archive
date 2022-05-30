@@ -5,12 +5,14 @@ on:
     - cron: 0 * * * *
 
 jobs:
-  test_schedule:
+  Archive:
     runs-on: ubuntu-latest
     steps:
       - name: Install Python
         run: sudo apt install python3
       - name: Install Waybackpy
         run: pip install waybackpy -U
+      - name: List Directory
+        run: ls
           
         
