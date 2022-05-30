@@ -1,4 +1,4 @@
-name: Archival
+name: Auto Archive
 on:
   schedule:
     - cron: 0 * * * *
@@ -13,7 +13,7 @@ jobs:
         run: sudo apt install python3
       - name: Install Waybackpy
         run: pip install waybackpy -U
-      - name: Run run.py
+      - name: Start Archive
         run: python3 run.py
           
         
