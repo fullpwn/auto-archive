@@ -13,9 +13,7 @@ jobs:
       - name: Install Waybackpy
         run: pip install waybackpy -U
       - name: List Directory
-        run: ls /home/runner/work/auto-archive/
-      - name: List Directory
-        run: ls /home/runner/work/_temp/
+        run: ls $github_workspace
       - name: Run run.py
         run: python3 run.py
           
