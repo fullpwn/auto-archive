@@ -7,7 +7,7 @@ user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTM
 save_api = WaybackMachineSaveAPI(main, user_agent)
 print(save_api.save())
 print("Saved Main Page")
-save_api = WaybackMachineSaveAPI(whatsnew, user_agent)
+save_api = WaybackMachineSaveAPI(imgarchive, user_agent)
 print(save_api.save())
 print("imgarchive")
 
